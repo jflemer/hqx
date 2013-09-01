@@ -20,3 +20,7 @@ Win32/
 *.vcxproj
 *.vcxproj.filters
 *.sln
+
+# Other
+*.a
+Makefile
