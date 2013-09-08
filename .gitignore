@@ -7,6 +7,7 @@ RemoteSystemsTempFiles/
 cdogs-sdl.dir/
 CPack*
 _CPack_Packages/
+CMakeScripts/
 
 # Visual Studio
 Debug/
@@ -20,6 +21,9 @@ Win32/
 *.vcxproj
 *.vcxproj.filters
 *.sln
+
+# Xcode
+*.xcodeproj/
 
 # Other
 *.a
