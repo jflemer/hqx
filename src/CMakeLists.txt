@@ -9,7 +9,7 @@ set(HQX_SOURCES
 set(HQX_HEADERS
 	common.h
 	hqx.h)
-add_library(hqx SHARED ${HQX_SOURCES} ${HQX_HEADERS})
+add_library(hqx STATIC ${HQX_SOURCES} ${HQX_HEADERS})
 set_target_properties(hqx PROPERTIES PREFIX "lib")
 if(MSVC)
 	set_target_properties(hqx PROPERTIES RUNTIME_OUTPUT_DIRECTORY ..)
