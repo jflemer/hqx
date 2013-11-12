@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8)
-add_definitions(-DDLL_EXPORT)
+add_definitions(-DSTATIC)
 set(HQX_SOURCES
 	common.c
 	hq2x.c
