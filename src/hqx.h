@@ -33,7 +33,7 @@
     #define HQX_CALLCONV
 #endif
 
-#if defined(_WIN32) and !defined(STATIC)
+#if defined(_WIN32) && !defined(STATIC)
     #ifdef DLL_EXPORT
         #define HQX_API __declspec(dllexport)
     #else
