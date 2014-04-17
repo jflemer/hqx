@@ -8,6 +8,7 @@ cdogs-sdl.dir/
 CPack*
 _CPack_Packages/
 CMakeScripts/
+CTestTestfile.cmake
 
 # Visual Studio
 Debug/
