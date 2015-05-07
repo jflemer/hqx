@@ -28,9 +28,9 @@ uint32_t rgb_to_yuv(uint32_t c)
 
 /* Test if there is difference in color */
 int yuv_diff(uint32_t yuv1, uint32_t yuv2) {
-    return (( abs((yuv1 & Ymask) - (yuv2 & Ymask)) > trY ) ||
-            ( abs((yuv1 & Umask) - (yuv2 & Umask)) > trU ) ||
-            ( abs((yuv1 & Vmask) - (yuv2 & Vmask)) > trV ) );
+    return ((yuv1 & Ymask) - (yuv2 & Ymask) > trY ||
+            (yuv1 & Umask) - (yuv2 & Umask) > trU ||
+            (yuv1 & Vmask) - (yuv2 & Vmask) > trV );
 }
 
 int Diff(uint32_t c1, uint32_t c2)
