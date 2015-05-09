@@ -12,31 +12,32 @@ NOTE: DevIL library and development headers are required.
     ./configure
     make && make install
 
-For more information refer to INSTALL.
+For more information refer to `INSTALL`.
 
 Usage
 -----
-hqx -s scaleBy input output
-Where scaleBy is either 2, 3 or 4
+    hqx -s scaleBy input output
+Where `scaleBy` is either 2, 3 or 4
 
 For example:
+
     hqx -s 4 test.png out.png
 
 Example
 -------
-#include <stdint.h>
-#include <hqx.h>
-
-uint32_t *src; // Pointer to source bitmap in RGB format
-size_t width, height; // Size of source bitmap
-
-/*
- * Code to init src, width & height
- */
-
-uint32_t *dest = (uint32_t *) malloc(width * 4 * height * 4 * sizeof(uint32_t));
-hqxInit();
-hq4x_32(src, dest, width, height);
+    #include <stdint.h>
+    #include <hqx.h>
+    
+    uint32_t *src; // Pointer to source bitmap in RGB format
+    size_t width, height; // Size of source bitmap
+    
+    /*
+     * Code to init src, width & height
+     */
+    
+    uint32_t *dest = (uint32_t *) malloc(width * 4 * height * 4 * sizeof(uint32_t));
+    hqxInit();
+    hq4x_32(src, dest, width, height);
 
 Implementation
 --------------
