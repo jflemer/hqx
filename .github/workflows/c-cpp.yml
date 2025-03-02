@@ -1,0 +1,21 @@
+name: C/C++ CI
+
+on:
+  push: {}
+  pull_request: {}
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    env:
+      DH_VERBOSE: 1
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: deps
+      run: |
+        sudo apt-get install -y  autotools-dev build-essential debhelper dpkg-dev devscripts libdevil-dev
+    - name: package
+      run: dpkg-buildpackage -nc -uc -b -rfakeroot
