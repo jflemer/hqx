@@ -22,6 +22,8 @@
 #include <hqx.h>
 #include <IL/il.h>
 
+#include "config.h"
+
 static inline uint32_t swapByteOrder(uint32_t ui)
 {
     return (ui >> 24) | ((ui << 8) & 0x00FF0000) | ((ui >> 8) & 0x0000FF00) | (ui << 24);

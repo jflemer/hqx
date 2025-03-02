@@ -9,4 +9,4 @@ include_HEADERS = hqx.h
 bin_PROGRAMS = hqx
 hqx_SOURCES = hqx.c
 hqx_CPPFLAGS = -I.
-hqx_LDFLAGS = -lIL libhqx.la
+hqx_LDADD = -lIL libhqx.la

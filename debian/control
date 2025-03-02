@@ -8,7 +8,7 @@ Homepage: http://code.google.com/p/hqx/
 Vcs-Svn: http://hqx.googlecode.com/svn/trunk/
 Vcs-Browser: http://code.google.com/p/hqx/source/browse/#svn%2Ftrunk
 
-Package: libhqx
+Package: libhqx1
 Section: libs
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
@@ -24,7 +24,7 @@ Description: fast, high-quality magnification filter for pixel art
 Package: libhqx-dev
 Section: libdevel
 Architecture: any
-Depends: libhqx (= ${binary:Version})
+Depends: libhqx1 (= ${binary:Version})
 Description: fast, high-quality magnification filter for pixel art
  hqx ("hq" stands for "high quality" and "x" stands for magnification)
  is one of the pixel art scaling algorithms developed by Maxim Stepin,
@@ -37,7 +37,7 @@ Description: fast, high-quality magnification filter for pixel art
 Package: libhqx-bin
 Section: graphics
 Architecture: any
-Depends: libhqx (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}
+Depends: libhqx1 (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}
 Description: fast, high-quality magnification filter for pixel art
  hqx ("hq" stands for "high quality" and "x" stands for magnification)
  is one of the pixel art scaling algorithms developed by Maxim Stepin,

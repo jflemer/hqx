@@ -1,5 +1,6 @@
-AC_INIT([hqx], [1.0], [grom@zeminvaders.net])
+AC_INIT([hqx],[1.0],[grom@zeminvaders.net])
 AC_CONFIG_MACRO_DIR([m4])
+AM_PROG_AR
 AC_PROG_CC
 AC_LANG([C])
 AC_C_INLINE
@@ -14,8 +15,7 @@ AC_ARG_ENABLE([debug],
           [CFLAGS="-Wall -g -O0"],
 	      [CFLAGS="-O3"])
 
-AC_LIBTOOL_WIN32_DLL
-AC_PROG_LIBTOOL
+LT_INIT([win32-dll])
 HQX_LTVERSION=1:0:0
 AC_SUBST([HQX_LTVERSION])
 
@@ -30,4 +30,5 @@ AM_CONDITIONAL([WINDOWS_BUILD],
 	       [test "x$PLATFORM" = "xMINGW32" -o "x$PLATFORM" = "xCYGWIN"])
 
 AC_CONFIG_FILES([Makefile src/Makefile])
+AC_CONFIG_HEADERS([src/config.h])
 AC_OUTPUT
